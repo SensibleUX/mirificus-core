@@ -1,4 +1,5 @@
 docs/
 vendor/
 phpdoc-*
-/nbproject
+composer.lock
+nbproject/
