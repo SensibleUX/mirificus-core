@@ -10,4 +10,4 @@ env:
 notifications:
   email: "mirificus@sensibleux.com"
   
-script: phpunit --version
+script: build.sh
