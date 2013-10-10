@@ -1,5 +1,7 @@
 #! /bin/bash
+
 composer install
-echo "listing directory"
-ls
+# need graphviz for phpdoc
+apt-get install graphviz
+# run phpdoc
 vendor/bin/phpdoc.php -d src/Mirificus -t doc/
