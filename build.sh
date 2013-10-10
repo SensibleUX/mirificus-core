@@ -2,4 +2,4 @@
 composer install
 echo "listing directory"
 ls
-#phpdoc -d src/Mirificus -t doc/
+vendor/bin/phpdoc.php -d src/Mirificus -t doc/
