@@ -9,5 +9,5 @@ env:
   
 notifications:
   email: "mirificus@sensibleux.com"
-  
+
 script: ./build.sh
