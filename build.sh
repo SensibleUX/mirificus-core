@@ -1,3 +1,5 @@
 #! /bin/bash
 composer install
-phpdoc -d src/Mirificus -t doc/
+echo "listing directory"
+ls
+#phpdoc -d src/Mirificus -t doc/
