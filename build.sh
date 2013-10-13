@@ -1,7 +1,4 @@
 #! /bin/bash
-
 composer install
-# need graphviz for phpdoc
-sudo apt-get install graphviz
-# run phpdoc
-vendor/bin/phpdoc.php -d src/Mirificus -t doc/
+phpunit CoreTest tests/Core.php
+wget -q --auth-no-challenge --http-user=$3 --http-password=$2 http://jenkins.jimsdevbox.com/job/mirificus/build?token=$1
