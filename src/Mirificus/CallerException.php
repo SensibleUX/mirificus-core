@@ -36,6 +36,7 @@ namespace Mirificus;
  * 	}
  * Again, this will assure the user that the line of code responsible for the excpetion is properly being reported
  * by the Mirificus error reporting/handler.
+ * 
  * @package Mirificus\CallerException
  */
 class CallerException extends \Exception
