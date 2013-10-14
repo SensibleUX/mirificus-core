@@ -3,7 +3,13 @@ namespace Mirificus;
 
 /**
  * This the the glue beween all Mirificus packages.
+ * 
+ * Core contains all properties and methods that are used
+ * between multiple subpackages, such as the Error handler
+ * class.
+ * 
  * @package Mirificus\Core
+ * @abstract
  */
 abstract class Core
 {
