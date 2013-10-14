@@ -1,9 +1,4 @@
 <?php
-/**
- * Mirificus PHP Framework
- * @package Mirificus
- */
-
 namespace Mirificus;
 
 /**
@@ -13,8 +8,7 @@ namespace Mirificus;
 abstract class Core
 {
     /**
-     * The package version.
-     * @var string $strVersion
+     * @var string $strVersion The package version.
      * @todo Make this dynamic.
      * @static
      * @access protected
@@ -22,24 +16,26 @@ abstract class Core
     protected static $strVersion = '0.1';
 
     /**
-     * Holds a globally accessible DB adapter definition.
-     * @var array $Database
+     * @var array $Database Holds a globally accessible DB adapter definition.
      * @static
      */
     public static $Database = array();
 
 	/**
-	 * Set this in your application.
+	 * @var string $DocumentRoot The document root for your application. Defaults to '/var/www'.
+     * @static
 	 */
 	public static $DocumentRoot = '/var/www';
 
 	/**
 	 * @var int $intStoredErrorLevel The level of error reporting.
+     * @static
 	 */
 	private static $intStoredErrorLevel = null;
 
     /**
      * Get the version.
+     * 
      * @return string The package version.
      */
     public static function Version()
@@ -53,7 +49,7 @@ abstract class Core
 	 *
 	 * @param string|null $strName The name of the new error handler function, or NULL if none
 	 * @param integer $intLevel If an error handler function is defined, then the new error reporting level (if any)
-	 * @throws CallerException
+	 * @throws CallerException if the error handler is already overridden. If this happens, call RestoreErrorHandler() again.
 	 * @static
 	 */
 	public static function SetErrorHandler($strName, $intLevel = null)
@@ -73,8 +69,9 @@ abstract class Core
 
 	/**
 	 * Restores the temporarily overridden default error handling mechanism back to the default.
-	 * @see SetErrorHandler
-	 * @throws CallerException
+     * 
+	 * @see SetErrorHandler()
+	 * @throws CallerException if the error handler hasn't been overridden
 	 * @static
 	 */
 	public static function RestoreErrorHandler()
@@ -90,10 +87,10 @@ abstract class Core
 
     /**
 	 * Same as mkdir() but correctly implements directory recursion.
-	 * At its core, it will use mkdir().
 	 * This method does no special error handling.  If you want to use special error handlers,
 	 * be sure to set that up BEFORE calling MakeDirectory().
 	 *
+     * @uses mkdir() internally to make the directory
 	 * @param string $strPath Actual path of the directoy you want to create.
 	 * @param integer $intMode Optional mode (permissions) e.g 644.
 	 * @return bool The return flag from mkdir().
