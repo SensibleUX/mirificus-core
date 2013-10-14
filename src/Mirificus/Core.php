@@ -1,8 +1,9 @@
 <?php
-
 /**
+ * Mirificus PHP Framework
  * @package Mirificus
  */
+
 namespace Mirificus;
 
 /**
