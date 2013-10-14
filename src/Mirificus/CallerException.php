@@ -1,8 +1,9 @@
 <?php
-
 /**
+ * Mirificus PHP Framework
  * @package Mirificus
  */
+
 namespace Mirificus;
 
 /**
@@ -47,11 +48,12 @@ class CallerException extends \Exception
     /** @var int $intOffset How many calls up the stack is the error? */
     private $intOffset;
 
-    /** @var string $strTraceArray */
+    /** @var string $strTraceArray The stack trace. */
     private $strTraceArray;
 
     /**
      * Sets the Message for the exception.
+     * @param string $strMessage The message to set for this exception.
      */
     public function setMessage($strMessage)
     {
