@@ -9,3 +9,7 @@ This package is required by all other Mirificus packages. This class stores shar
 To aid in debugging, this extends Exception to indicate that the caller of the method is responsible for throwing the exception and show the correct file and line number.
 
 ![Mirificus logo](http://sensibleux.com/wp-content/uploads/2013/09/mirificus.png "Mirificus PHP Library")
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/SensibleUX/mirificus-core/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
